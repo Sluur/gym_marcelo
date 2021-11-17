@@ -19,7 +19,7 @@ class clsMain(QtWidgets.QMainWindow):
         uic.loadUi('C:/Users/rodri/Desktop/Trabajo Final python/Pantallas qt/main.ui',self)
         
         self.objUser = data_repositories_clsUserrepository.clsUserRepository()
-        
+        print("A")
         
         self.setupUiComponents()
 
