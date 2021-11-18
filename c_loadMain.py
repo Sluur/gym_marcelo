@@ -9,7 +9,8 @@ import sys
 
 
 import c_loadNewMember
-import c_loadnewMembership
+
+import c_clsSearchDni
 
 import data_repositories_clsUserrepository
 
@@ -24,17 +25,21 @@ class clsMain(QtWidgets.QMainWindow):
         self.setupUiComponents()
 
     def setupUiComponents(self):
-            self.btnNewS.clicked.connect(self.insertMember)
-            self.btnNewM.clicked.connect(self.insertMembresia)
+        self.btnNewS.clicked.connect(self.insertMember)
+        self.btnNewM.clicked.connect(self.searchDni)
 
+    
+    
+    def searchDni(self):
+        self.w = c_clsSearchDni.clsSearchDni()
+        self.w.show()
+        
     def insertMember(self):
         self.w = c_loadNewMember.clsNewMember()
         self.w.show()
         result = self.objUser.getAll()
         print(result)
-    def insertMembresia(self):
-        self.w = c_loadnewMembership.clsNewMembership()
-        self.w.show()
+
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
