@@ -17,23 +17,7 @@
    <string notr="true">background rgb(226, 226, 226)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btnNewM">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>140</y>
-      <width>200</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Nueva Membresia</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnNewS">
+   <widget class="QPushButton" name="btnNew">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -41,12 +25,12 @@
      <rect>
       <x>180</x>
       <y>140</y>
-      <width>200</width>
+      <width>421</width>
       <height>100</height>
      </rect>
     </property>
     <property name="text">
-     <string>Agregar nuevo socio</string>
+     <string>Nuevo Socio/Membresia</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
@@ -62,7 +46,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Ver Socios</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">

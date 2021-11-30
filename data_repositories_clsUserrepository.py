@@ -7,7 +7,7 @@ class clsUserRepository:
                 self.bd= data_clsConexion.clsConexion()
 
         def getAll(self):
-                query = "SELECT * FROM usuario;"
+                query = "SELECT ID, nombre, Password, email  FROM usuario;"
                # query = "SELECT iris.id, iris.sepalLength, iris.sepalWidth, iris.petalLength, iris.petalWidth, iris.idType, iristype.description FROM iris INNER JOIN iristype ON iris.idType=iristype.id;"
                 result = self.bd.run_query(query)
 
@@ -15,6 +15,24 @@ class clsUserRepository:
                         return None
                 else:
                         return result
+        def getFiltered(self, texto):
+                texto = "%"+texto.upper()+"%"
+                query = "SELECT ID, nombre, Password, email from usuario where UCASE(nombre) like '%s' or UCASE(email) like '%s';"%(texto,texto)
+                result = self.bd.run_query(query)
+                if (len(result)==0):
+                        return None
+                else:
+                        return result
+        
+        def validate(self, user, psw):
+                query = "SELECT nombre FROM usuario WHERE Email = '%s' AND password ='%s';"%(user,psw)
+                result = self.bd.run_query(query)                                
+                if (len(result)==0):
+                        return False
+                else:
+                        return True
+                        
+                
         def insert(self, sepalL, sepalW, petalL, petalW, idT):
                 query = "INSERT INTO usuario (sepalLength, sepalWidth, petalLength, petalWidth, idType) VALUES ('%s','%s','%s','%s','%d');"%(sepalL, sepalW, petalL, petalW, idT)          
                 self.bd.run_query(query)

@@ -14,10 +14,10 @@ import c_clsSearchDni
 
 import data_repositories_clsUserrepository
 
-class clsMain(QtWidgets.QMainWindow):
+class clsMenu(QtWidgets.QMainWindow):
     def __init__(self):
-        super(clsMain, self).__init__()
-        uic.loadUi('C:/Users/rodri/Desktop/Trabajo Final python/Pantallas qt/main.ui',self)
+        super(clsMenu, self).__init__()
+        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/main.ui',self)
         
         self.objUser = data_repositories_clsUserrepository.clsUserRepository()
         print("A")
@@ -25,8 +25,7 @@ class clsMain(QtWidgets.QMainWindow):
         self.setupUiComponents()
 
     def setupUiComponents(self):
-        self.btnNewS.clicked.connect(self.insertMember)
-        self.btnNewM.clicked.connect(self.searchDni)
+        self.btnNew.clicked.connect(self.searchDni)
 
     
     
@@ -34,19 +33,16 @@ class clsMain(QtWidgets.QMainWindow):
         self.w = c_clsSearchDni.clsSearchDni()
         self.w.show()
         
-    def insertMember(self):
-        self.w = c_loadNewMember.clsNewMember()
-        self.w.show()
-        result = self.objUser.getAll()
-        print(result)
+    
 
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
     
-    mainW = clsMain()
+    mainW = clsMenu()
     mainW.show()
     app.exec_()
 
 
-main() 
+if __name__ == '__main__':
+    main() 

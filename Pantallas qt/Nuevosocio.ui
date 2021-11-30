@@ -190,21 +190,6 @@
       <height>22</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>Masculino</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Femenino</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Otro</string>
-     </property>
-    </item>
    </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
@@ -277,7 +262,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Cancelar</string>
+     <string>Guardar</string>
     </property>
    </widget>
   </widget>
