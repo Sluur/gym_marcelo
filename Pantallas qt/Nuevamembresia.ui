@@ -119,7 +119,7 @@
      <string>Fecha Alta</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnGuardar">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -257,7 +257,7 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>210</x>
       <y>230</y>
       <width>201</width>
       <height>51</height>
@@ -270,7 +270,26 @@
      </font>
     </property>
     <property name="text">
-     <string>Precio: $3000</string>
+     <string>Total:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtPrecio">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>230</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Coolvetica Rg</family>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>$3000</string>
     </property>
    </widget>
   </widget>

@@ -33,7 +33,7 @@
      <string>Nuevo Socio/Membresia</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btnSocios">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -65,7 +65,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnNewT">
+   <widget class="QPushButton" name="btnTarifa">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -189,12 +189,12 @@
      <string>Administrador</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="txtCuota">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>290</x>
       <y>30</y>
-      <width>191</width>
+      <width>311</width>
       <height>61</height>
      </rect>
     </property>

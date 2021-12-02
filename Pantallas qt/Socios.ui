@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>799</width>
-    <height>600</height>
+    <width>740</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QPushButton" name="btnTraer">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>20</y>
-      <width>75</width>
-      <height>23</height>
+      <x>620</x>
+      <y>30</y>
+      <width>81</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="toolTip">
@@ -30,7 +30,7 @@
      <number>6</number>
     </property>
     <property name="text">
-     <string>Traer</string>
+     <string>Buscar</string>
     </property>
     <property name="autoDefault">
      <bool>true</bool>
@@ -41,7 +41,7 @@
      <rect>
       <x>20</x>
       <y>70</y>
-      <width>771</width>
+      <width>691</width>
       <height>461</height>
      </rect>
     </property>
@@ -49,11 +49,37 @@
    <widget class="QLineEdit" name="txtBusqueda">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>20</y>
-      <width>441</width>
+      <x>20</x>
+      <y>30</y>
+      <width>591</width>
       <height>20</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>540</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Actualizar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEliminar">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>540</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Eliminar</string>
     </property>
    </widget>
   </widget>
@@ -62,7 +88,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>799</width>
+     <width>740</width>
      <height>21</height>
     </rect>
    </property>

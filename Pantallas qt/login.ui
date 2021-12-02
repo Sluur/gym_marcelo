@@ -33,7 +33,7 @@
      <string>INGRESAR</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
+   <widget class="QLineEdit" name="txtPass">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -42,8 +42,11 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="txtUser">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -91,7 +94,7 @@
      <string>Usuario</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btnIngresar">
     <property name="geometry">
      <rect>
       <x>120</x>

@@ -2,7 +2,7 @@ import data_clsConexion
 
 from datetime import datetime
 
-class clsSocioRepository: 
+class clsMembresiasRepository: 
 
         def __init__(self):
                 self.bd= data_clsConexion.clsConexion()
@@ -31,21 +31,26 @@ class clsSocioRepository:
                         return None
                 else:
                         return result
-        def insert(self, apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid):                
+        def insert(self, tarifanueva, fechaalta):                
                 
-                #query = 'INSERT INTO socio (Apellido,Nombre,Dni,Telefono, FechaNac, Sexo, Observaciones, Baneado, rutina_Id) VALUES ('%s','%s', '%d', '%d', '%s', '%d', '%s', '%d', '%d');"%(apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid)
-                
-                query = "INSERT INTO socio (Apellido,Nombre,Dni,Telefono, FechaNac, Sexo, Observaciones, Baneado, rutina_Id) VALUES ('%s','%s', '%d', '%d', '%s', '%s', '%s', '%d', '%d');"%(apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid)
+                query = "INSERT INTO tarifa (Precio, FechaAlta) VALUES ('%d','%s');"%(tarifanueva, fechaalta)
                 self.bd.run_query(query)
 
-
+        def getActive(self):
+            query = "SELECT s.Id,s.Precio FROM tarifa s WHERE s.FechaBaja IS NULL;"
+            result = self.bd.run_query(query)
+            print(result[0][0])
+            if(len(result)==0):
+                    return None
+            else:
+                    return result
         def delete(self, ID):
                 query = "DELETE FROM socio WHERE id= " + str(ID) + ";"
                 self.bd.run_query(query)
 
-        def update(self,apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid):
+        def update(self, fechabaja, ID):
 
-                query = "UPDATE socio SET Apellido ='%s', Nombre='%s', Dni='%d', Telefono='%d', Fechanac ='%s', Sexo ='%s', Observaciones ='%s', Baneado ='%d', rutina_Id='%d' WHERE Dni = '%s';"%(apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid, dni)  
+                query = "UPDATE tarifa SET FechaBaja='%s' WHERE id = '%s';"%(fechabaja, ID)  
                 self.bd.run_query(query)
         
         def get(self, ID):

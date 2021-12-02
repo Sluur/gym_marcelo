@@ -20,6 +20,7 @@ class clsSearchDni(QtWidgets.QMainWindow):
     
     def setupUiComponents(self):
         self.btnContinue.clicked.connect(self.validateDni)
+        self.btnCancelarDni.clicked.connect(self.close)
     
     def validateDni(self):
         dniSearch = self.txtDni.text()
@@ -30,7 +31,7 @@ class clsSearchDni(QtWidgets.QMainWindow):
             self.w.show()
             self.close()
         else:
-            self.w = c_loadNewMember.clsNewMember()
+            self.w = c_loadNewMember.clsNewMember(None)
             self.w.show()
             self.close()
             

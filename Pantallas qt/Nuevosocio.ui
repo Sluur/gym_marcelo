@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="txtTopSocio">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -33,7 +33,7 @@
      <string>NUEVO SOCIO</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="txtApellido">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -43,7 +43,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -110,7 +110,7 @@
      <string>DNI</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="txtDni">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -120,7 +120,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="txtTelefono">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -210,7 +210,7 @@
      <string>Sexo</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="txtObs">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -252,7 +252,7 @@
      <string>Guardar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btnCancelar">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -262,7 +262,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Guardar</string>
+     <string>Cancelar</string>
     </property>
    </widget>
   </widget>
