@@ -14,7 +14,7 @@ from datetime import timedelta
 class clsNewMembership(QtWidgets.QMainWindow):
     def __init__(self, aux):
         super(clsNewMembership, self).__init__()
-        uic.loadUi('C:/Users/nalej/Downloads/gym_marcelo-main (1)/gym_marcelo-main/Pantallas qt/Nuevamembresia.ui',self)
+        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/Nuevamembresia.ui',self)
         self.objUser = data_repositories_clsSociosrepository.clsSocioRepository()
         self.objMembresia = data_repositories_clsMembresias.clsMembresiasRepository()
         self.objTarifa = data_repositories_clsTarifas.clsMembresiasRepository()

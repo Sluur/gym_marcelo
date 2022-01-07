@@ -17,7 +17,7 @@ import data_repositories_clsMembresias
 class clsLoadMembresias(QtWidgets.QMainWindow):
     def __init__(self):
         super(clsLoadMembresias, self).__init__()
-        uic.loadUi('C:/Users/nalej/Downloads/gym_marcelo-main (1)/gym_marcelo-main/Pantallas qt/Membresias.ui',self)
+        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/Membresias.ui',self)
         
         self.objMembresia = data_repositories_clsMembresias.clsMembresiasRepository()
         

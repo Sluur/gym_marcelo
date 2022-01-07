@@ -12,7 +12,7 @@ import c_loadNewMember
 class clsSearchDni(QtWidgets.QMainWindow):
     def __init__(self):
         super(clsSearchDni, self).__init__()
-        uic.loadUi('C:/Users/nalej/Downloads/gym_marcelo-main (1)/gym_marcelo-main/Pantallas qt/Dnisearch.ui',self)
+        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/Dnisearch.ui',self)
 
         self.objUser = data_repositories_clsSociosrepository.clsSocioRepository()
         self.setupUiComponents()

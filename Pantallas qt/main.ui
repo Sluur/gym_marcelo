@@ -10,11 +10,16 @@
     <height>570</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>5</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background rgb(226, 226, 226)</string>
+   <string notr="true">background : white</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btnNew">
@@ -28,6 +33,34 @@
       <width>421</width>
       <height>100</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <stylestrategy>PreferAntialias</stylestrategy>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	border: none;
+	border-radius: 30px;
+	padding: 0 8px;
+	background-color: rgb(39, 180, 255);
+	color: white;
+}
+QPushButton::hover{
+	
+	background-color: rgb(153, 220, 255);
+}
+QPushButton::pressed{
+
+	background-color: rgb(39, 180, 255);
+}</string>
     </property>
     <property name="text">
      <string>Nuevo Socio/Membresia</string>
@@ -45,6 +78,31 @@
       <height>100</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light</family>
+      <pointsize>12</pointsize>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	border: none;
+	border-radius: 30px;
+	padding: 0 8px;
+	background-color: rgb(39, 180, 255);
+	color: white;
+}
+QPushButton::hover{
+	
+	background-color: rgb(153, 220, 255);
+}
+QPushButton::pressed{
+
+	background-color: rgb(39, 180, 255);
+}</string>
+    </property>
     <property name="text">
      <string>Ver Socios</string>
     </property>
@@ -60,6 +118,22 @@
       <width>200</width>
       <height>100</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	border: none;
+	border-radius: 30px;
+	padding: 0 8px;
+	background: rgb(39, 180, 255);
+	color: white;
+}</string>
     </property>
     <property name="text">
      <string>PushButton</string>
@@ -77,6 +151,32 @@
       <height>100</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	border: none;
+	border-radius: 30px;
+	padding: 0 8px;
+	background-color: rgb(39, 180, 255);
+	color: white;
+}
+QPushButton::hover{
+	
+	background-color: rgb(153, 220, 255);
+}
+QPushButton::pressed{
+
+	background-color: rgb(39, 180, 255);
+}</string>
+    </property>
     <property name="text">
      <string>Actualizar Tarifa</string>
     </property>
@@ -92,6 +192,37 @@
       <width>200</width>
       <height>100</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <stylestrategy>PreferAntialias</stylestrategy>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+	border: none;
+	border-radius: 30px;
+	padding: 0 8px;
+	background-color: rgb(39, 180, 255);
+	color: white;
+}
+QPushButton::hover{
+	
+	background-color: rgb(153, 220, 255);
+}
+QPushButton::pressed{
+
+	background-color: rgb(39, 180, 255);
+}</string>
     </property>
     <property name="text">
      <string>Ver Membresias</string>
@@ -117,6 +248,9 @@
       <kerning>false</kerning>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(39, 180, 255);</string>
+    </property>
     <property name="text">
      <string>MARCELO</string>
     </property>
@@ -128,7 +262,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>50</y>
+      <y>60</y>
       <width>71</width>
       <height>41</height>
      </rect>
@@ -143,6 +277,9 @@
       <underline>false</underline>
       <kerning>false</kerning>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(39, 180, 255);</string>
     </property>
     <property name="text">
      <string>GYM</string>
@@ -185,6 +322,9 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(39, 180, 255);</string>
+    </property>
     <property name="text">
      <string>Administrador</string>
     </property>
@@ -192,14 +332,15 @@
    <widget class="QLabel" name="txtCuota">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>300</x>
       <y>30</y>
-      <width>311</width>
+      <width>191</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Bahnschrift SemiBold</family>
       <pointsize>24</pointsize>
      </font>
     </property>

@@ -17,7 +17,7 @@ import data_repositories_clsMembresias,data_repositories_clsSociosrepository
 class clsPago(QtWidgets.QMainWindow):
     def __init__(self, aux, pago, dias):
         super(clsPago, self).__init__()
-        uic.loadUi('C:/Users/nalej/Downloads/gym_marcelo-main (1)/gym_marcelo-main/Pantallas qt/Continuarmembresia.ui',self)
+        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/Continuarmembresia.ui',self)
 
 
         self.dias = dias
