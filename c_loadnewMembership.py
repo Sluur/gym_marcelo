@@ -1,9 +1,11 @@
 from PyQt5 import QtCore, QtWidgets, uic
-import data_repositories_clsSociosrepository,data_repositories_clsTarifas
+import data_repositories_clsSociosrepository,data_repositories_clsMembresias,data_repositories_clsTarifas
+import c_continarPago
 from PyQt5.QtCore import QDate, QTime, QDateTime, Qt
 import traceback
 import sys
-
+from datetime import datetime
+from datetime import timedelta
 
 #https://stackoverflow.com/questions/59960494/pyqt5-recursionerror-maximum-recursion-depth-exceeded-while-calling-a-python-o
 # como salvar recursion x ventanas que se llaman
@@ -12,9 +14,10 @@ import sys
 class clsNewMembership(QtWidgets.QMainWindow):
     def __init__(self, aux):
         super(clsNewMembership, self).__init__()
-        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/Nuevamembresia.ui',self)
+        uic.loadUi('C:/Users/nalej/Downloads/gym_marcelo-main (1)/gym_marcelo-main/Pantallas qt/Nuevamembresia.ui',self)
         self.objUser = data_repositories_clsSociosrepository.clsSocioRepository()
-        self.objTarifa  = data_repositories_clsTarifas.clsMembresiasRepository()
+        self.objMembresia = data_repositories_clsMembresias.clsMembresiasRepository()
+        self.objTarifa = data_repositories_clsTarifas.clsMembresiasRepository()
         self.aux = aux
         self.setupUiComponents()
         
@@ -37,6 +40,9 @@ class clsNewMembership(QtWidgets.QMainWindow):
         self.comboBox.currentIndexChanged.connect(self.on_change)
         
         self.tarifa = int((self.objTarifa.getActive())[0][1])
+        self.dias = 30;
+        self.pago = self.tarifa
+
         print (self.tarifa)
 
     def on_change(self, newIndex):
@@ -67,18 +73,49 @@ class clsNewMembership(QtWidgets.QMainWindow):
             return elem
     
     def calcularPago(self):
+        
         tipo = int((self.comboBox.currentText())[0])
         tiempo = int((self.comboBox_2.currentText())[0])
-        print(tipo)
+        print (tipo)
         print(tiempo)
+        if tipo == 1:
+            self.pago = (self.pago)/10;
+        elif tipo == 5:
+            print("hola")
+            if tiempo == 1:
+                self.pago = self.pago
+            elif tiempo == 2:
+                self.pago = self.pago*2
+                self.dias = self.dias*2
+            elif tiempo == 3:
+                self.pago = self.pago*3
+                self.dias = self.dias*3
+            elif tiempo == 6:
+                self.pago = self.pago*6   
+                self.dias = self.dias*6
+        elif tipo == 3:
+            print("hola")
+            self.pago == ((self.pago)*75)/100
+            if tiempo == 1:
+                self.pago = self.pago
+            elif tiempo == 2:
+                self.pago = self.pago*2
+            elif tiempo == 3:
+                self.pago = self.pago*3
+            elif tiempo == 6:
+                self.pago = self.pago*6
+        print(self.pago)
 
+        fechaAlta = self.dateEdit.date()
+        fechaBaja = fechaAlta.addDays(self.dias)
 
+        print(fechaAlta.toPyDate().strftime("%Y-%m-%d"))
+        print(fechaBaja.toPyDate().strftime("%Y-%m-%d"))
+        print(self.aux[0])
         
-    
-    
-    def insterMembership(self):
-        self.objUser 
-        
+        self.objMembresia.add(str(fechaAlta.toPyDate().strftime("%Y-%m-%d")),str(fechaBaja.toPyDate().strftime("%Y-%m-%d")),int(self.aux[0]))
+
+        self.close()
 def main():
     app = QtWidgets.QApplication(sys.argv)
     

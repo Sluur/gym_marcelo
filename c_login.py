@@ -17,7 +17,7 @@ import data_repositories_clsUserrepository
 class clsLogin(QtWidgets.QMainWindow):
     def __init__(self):
         super(clsLogin, self).__init__()
-        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/login.ui',self)
+        uic.loadUi('C:/Users/nalej/Downloads/gym_marcelo-main (1)/gym_marcelo-main/Pantallas qt/login.ui',self)
         
         self.objUser = data_repositories_clsUserrepository.clsUserRepository()
         print("A")

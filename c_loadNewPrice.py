@@ -12,7 +12,7 @@ import c_loadNewMember
 class clsLoadNewPrice(QtWidgets.QMainWindow):
     def __init__(self):
         super(clsLoadNewPrice, self).__init__()
-        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/NuevaTarifa.ui',self)
+        uic.loadUi('C:/Users/nalej/Downloads/gym_marcelo-main (1)/gym_marcelo-main/Pantallas qt/NuevaTarifa.ui',self)
 
         self.objTarifa = data_repositories_clsTarifas.clsMembresiasRepository()
         self.setupUiComponents()

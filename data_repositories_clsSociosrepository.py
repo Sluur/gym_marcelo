@@ -43,9 +43,9 @@ class clsSocioRepository:
                 query = "DELETE FROM socio WHERE id= " + str(ID) + ";"
                 self.bd.run_query(query)
 
-        def update(self,apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid):
+        def update(self,apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid,ID):
 
-                query = "UPDATE socio SET Apellido ='%s', Nombre='%s', Dni='%d', Telefono='%d', Fechanac ='%s', Sexo ='%s', Observaciones ='%s', Baneado ='%d', rutina_Id='%d' WHERE Dni = '%s';"%(apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid, dni)  
+                query = "UPDATE socio SET Apellido ='%s', Nombre='%s', Dni='%d', Telefono='%d', Fechanac ='%s', Sexo ='%s', Observaciones ='%s', Baneado ='%d', rutina_Id='%d' WHERE Id = '%d';"%(apellido, nombre, dni, telefono, fechanac, sexo, observaciones, baneado, rutinaid,ID)  
                 self.bd.run_query(query)
         
         def get(self, ID):

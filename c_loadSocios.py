@@ -17,7 +17,7 @@ import data_repositories_clsSociosrepository
 class clsloadSocios(QtWidgets.QMainWindow):
     def __init__(self):
         super(clsloadSocios, self).__init__()
-        uic.loadUi('C:/Users/rodri/Documents/gym_marcelo/Pantallas qt/Socios.ui',self)
+        uic.loadUi('C:/Users/nalej/Downloads/gym_marcelo-main (1)/gym_marcelo-main/Pantallas qt/Socios.ui',self)
         
         self.objUser = data_repositories_clsSociosrepository.clsSocioRepository()
         print("A")

@@ -39,7 +39,7 @@ class clsMembresiasRepository:
         def getActive(self):
             query = "SELECT s.Id,s.Precio FROM tarifa s WHERE s.FechaBaja IS NULL;"
             result = self.bd.run_query(query)
-            print(result[0][0])
+
             if(len(result)==0):
                     return None
             else:
